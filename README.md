@@ -73,5 +73,5 @@ DeliKiosk es una plataforma diseñada para la gestión de pedidos y productos en
 
 ## Licencia
 
-Este proyecto está licenciado bajo la [Licencia Creative Commons Atribución-NoComercial 4.0 Internacional](https://creativecommons.org/licenses/by-nc/4.0/), lo que significa que puedes ver y modificar el código, pero no puedes distribuirlo ni venderlo con fines comerciales.
+Este proyecto está licenciado bajo la [Licencia Creative Commons Atribución-NoComercial 4.0 Internacional](./LICENSE), lo que significa que puedes ver y modificar el código, pero no puedes distribuirlo ni venderlo con fines comerciales.
 
