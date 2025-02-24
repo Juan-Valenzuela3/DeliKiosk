@@ -30,7 +30,7 @@ DeliKiosk es una plataforma diseñada para la gestión de pedidos y productos en
 1. **Clona el repositorio:**
 
    ```sh
-   git clone https://github.com/tu-usuario/DeliKiosk.git
+   git clone https://github.com/Juan-Valenzuela3/DeliKiosk.git
    ```
 
 2. **Instala las dependencias:**
