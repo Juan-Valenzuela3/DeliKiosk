@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DELIKIOSK
 
-## Getting Started
+DeliKiosk es una plataforma diseñada para la gestión de pedidos y productos en un entorno digital, permitiendo la creación, actualización y administración eficiente de los mismos. Este proyecto está construido con **Next.js** y **TypeScript**, asegurando un rendimiento óptimo y una experiencia de usuario fluida.
 
-First, run the development server:
+## Características
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Gestión de Pedidos:** Realiza operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre los pedidos.
+- **Gestión de Productos:** Agrega, actualiza y administra productos fácilmente.
+- **Panel de Administración:** Una interfaz dedicada para la gestión eficiente de pedidos y productos.
+- **Diseño Moderno:** UI construida con **Tailwind CSS** para una experiencia visual atractiva y responsiva.
+- **Arquitectura Modular:** Código organizado y fácil de mantener.
+- **Alto Rendimiento:** Uso de Next.js para mejorar la carga y navegación de la aplicación.
+- **Base de Datos y ORM:** Implementación de **Prisma** para la gestión eficiente de la base de datos.
+- **Despliegue en la Nube:** Implementado en **Vercel** para el frontend y **Render** para el backend, asegurando escalabilidad y disponibilidad.
+- **Seguridad y Buenas Prácticas:** Implementación de TypeScript y ESLint para un código más robusto.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologías Utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework Frontend:** Next.js con soporte para SSR y SSG.
+- **Lenguaje:** TypeScript.
+- **Estilos:** Tailwind CSS.
+- **Gestión del Estado:** Manejo eficiente de datos con acciones y hooks personalizados.
+- **Base de Datos:** Prisma ORM para la interacción con la base de datos.
+- **Despliegue:** Vercel para alojamiento del frontend y Render para el backend.
+- **Linting y Calidad del Código:** ESLint y configuración con Prettier.
+- **Configuración de Entorno:** Uso de variables de entorno con `.env`.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Instalación y Configuración
 
-## Learn More
+1. **Clona el repositorio:**
 
-To learn more about Next.js, take a look at the following resources:
+   ```sh
+   git clone https://github.com/tu-usuario/DeliKiosk.git
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Instala las dependencias:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```sh
+   cd DeliKiosk
+   npm install
+   ```
 
-## Deploy on Vercel
+3. **Configura las variables de entorno:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   Crea un archivo `.env` en la raíz del proyecto y define las siguientes variables:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```env
+   NEXT_PUBLIC_API_URL=http://localhost:3000/api
+   DATABASE_URL=tu_base_de_datos
+   ```
+
+4. **Ejecuta el proyecto en modo desarrollo:**
+
+   ```sh
+   npm run dev
+   ```
+
+5. **Accede a la aplicación:**
+
+   - Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
+
+## Rutas Principales
+
+- `/` → Página principal.
+- `/admin` → Panel de administración.
+- `/admin/orders` → Gestión de pedidos.
+- `/admin/products` → Gestión de productos.
+
+## Autor
+
+- [GitHub](https://github.com/Juan-Valenzuela3)
+- [LinkedIn](https://www.linkedin.com/in/juan-valenzuela-camelo)
+
+## Licencia
+
+Este proyecto está licenciado bajo la [Licencia Creative Commons Atribución-NoComercial 4.0 Internacional](https://creativecommons.org/licenses/by-nc/4.0/), lo que significa que puedes ver y modificar el código, pero no puedes distribuirlo ni venderlo con fines comerciales.
+
