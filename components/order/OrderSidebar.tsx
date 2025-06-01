@@ -10,9 +10,11 @@ export default async function OrderSidebar() {
   const categories = await getCategories()
   
   return (
-    <aside className="md:w-72 md:h-screen bg-white">
-        <Logo />
-        <nav className='mt-10'>
+    <aside className="md:w-72 md:h-screen glass-effect border-r border-white/20">
+        <div className="p-6">
+            <Logo />
+        </div>
+        <nav className='px-4 space-y-2'>
             {categories.map(category => (
               <CategoryIcon 
                 key={category.id}
