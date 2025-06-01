@@ -58,9 +58,24 @@ html {
   touch-action: manipulation;
 }
 
-/* Prevent zoom on inputs for iOS */
+/* Prevent zoom on inputs for iOS and improve toast positioning */
 @media screen and (max-width: 768px) {
   input, textarea, select {
     font-size: 16px !important;
+  }
+  
+  /* Toast mobile responsive */
+  .Toastify__toast-container {
+    padding: 0.5rem;
+    left: 0.5rem;
+    right: 0.5rem;
+    width: auto !important;
+  }
+  
+  .Toastify__toast {
+    margin-bottom: 0.5rem;
+    border-radius: 0.75rem;
+    min-height: auto;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
   }
 }
