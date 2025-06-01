@@ -324,7 +324,6 @@ Ver [LICENSE](./LICENSE) para más detalles.
 **Juan Valenzuela**
 - 🌐 [GitHub](https://github.com/Juan-Valenzuela3)
 - 💼 [LinkedIn](https://www.linkedin.com/in/juan-valenzuela-camelo)
-- 📧 [Email](mailto:juan.valenzuela@ejemplo.com)
 
 ---
 
