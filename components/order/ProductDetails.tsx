@@ -20,50 +20,55 @@ export default function ProductDetails({ item }: ProductDetailsProps) {
     const disableIncreaseButton = useMemo(() => item.quantity === MAX_ITEMS, [item])
 
     return (
-        <div className="shadow space-y-1 p-4 bg-white  border-t border-gray-200 ">
-            <div className="space-y-4">
-                <div className="flex justify-between items-start">
-                    <p className="text-xl font-bold">{item.name} </p>
-
-                    <button
-                        type="button"
-                        onClick={() => removeItem(item.id)}
-                    >
-                        <XCircleIcon className="text-red-600 h-8 w-8" />
-                    </button>
+        <div className="card-modern p-3 md:p-4 space-y-2 md:space-y-3">
+            <div className="flex justify-between items-start">
+                <div className="flex-1 pr-2">
+                    <h3 className="text-base md:text-lg font-semibold text-gray-800 line-clamp-2">{item.name}</h3>
+                    <p className="text-lg md:text-xl font-bold bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">
+                        {formatCurrency(item.price)}
+                    </p>
                 </div>
-                <p className="text-2xl text-amber-500 font-black">
-                    {formatCurrency(item.price)}
-                </p>
-                <div className="flex gap-5 px-10 py-2 bg-gray-100 w-fit rounded-lg">
+
+                <button
+                    type="button"
+                    onClick={() => removeItem(item.id)}
+                    className="text-red-500 hover:text-red-700 hover:bg-red-50 p-1 rounded-full transition-all duration-200 flex-shrink-0"
+                >
+                    <XCircleIcon className="h-5 w-5 md:h-6 md:w-6" />
+                </button>
+            </div>
+
+            <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2 md:gap-3 bg-gray-50 rounded-xl p-1.5 md:p-2">
                     <button
                         type="button"
                         onClick={() => decreaseQuantity(item.id)}
                         disabled={disableDecreaseButton}
-                        className='disabled:opacity-20'
+                        className='disabled:opacity-30 hover:bg-white p-1.5 md:p-2 rounded-lg transition-all duration-200 hover:shadow-sm'
                     >
-                        <MinusIcon className="h-6 w-6" />
+                        <MinusIcon className="h-3 w-3 md:h-4 md:w-4 text-gray-600" />
                     </button>
 
-                    <p className="text-lg font-black ">
+                    <span className="text-base md:text-lg font-bold text-gray-800 min-w-[1.5rem] md:min-w-[2rem] text-center">
                         {item.quantity}
-                    </p>
+                    </span>
 
                     <button
                         type='button'
                         onClick={() => increaseQuantity(item.id)}
-                        className="disabled:opacity-10"
                         disabled={disableIncreaseButton}
+                        className="disabled:opacity-30 hover:bg-white p-1.5 md:p-2 rounded-lg transition-all duration-200 hover:shadow-sm"
                     >
-                        <PlusIcon className="h-6 w-6" />
+                        <PlusIcon className="h-3 w-3 md:h-4 md:w-4 text-gray-600" />
                     </button>
                 </div>
-                <p className="text-xl font-black text-gray-700">
-                    Subtotal: {''}
-                    <span className="font-normal">
+
+                <div className="text-right">
+                    <p className="text-xs md:text-sm text-gray-500">Subtotal</p>
+                    <p className="text-base md:text-lg font-bold text-gray-800">
                         {formatCurrency(item.subtotal)}
-                    </span>
-                </p>
+                    </p>
+                </div>
             </div>
         </div>
     )
