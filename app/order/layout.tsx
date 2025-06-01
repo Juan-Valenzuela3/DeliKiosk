@@ -6,16 +6,22 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
     return (
         <>
-            <div className="md:flex min-h-screen">
+            {/* Mobile: Stack layout, Desktop: Flex layout */}
+            <div className="flex flex-col md:flex-row min-h-screen">
                 <OrderSidebar />
 
-                <main className="md:flex-1 md:h-screen md:overflow-y-scroll p-6 bg-gradient-to-br from-gray-50/50 to-blue-50/50">
+                {/* Mobile: Full width with padding, Desktop: Flex-1 with scroll */}
+                <main className="flex-1 md:h-screen md:overflow-y-scroll 
+                               p-4 md:p-6 bg-gradient-to-br from-gray-50/50 to-blue-50/50">
                     <div className="max-w-7xl mx-auto">
                         {children}
                     </div>
                 </main>
 
-                <OrderSummary />
+                {/* Mobile: Bottom sheet style, Desktop: Right sidebar */}
+                <div className="md:block">
+                    <OrderSummary />
+                </div>
             </div>
 
             <ToastNotification />

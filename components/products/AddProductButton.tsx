@@ -13,7 +13,10 @@ export default function AddProductButton({product}: AddProductButtonProps) {
     return (
         <button
             type="button"
-            className="btn-primary w-full uppercase tracking-wide text-sm"
+            className="btn-primary w-full uppercase tracking-wide text-sm
+                       /* Mobile touch improvements */
+                       active:scale-95 md:active:scale-95 
+                       touch-manipulation select-none"
             onClick={() => addToOrder(product)}
         >
             Agregar al Pedido
